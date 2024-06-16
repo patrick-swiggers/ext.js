@@ -1,0 +1,18 @@
+<project name="CustomerApp" default="build">
+ 
+  <property environment="env" />
+  <import file="C:\BY\STWWMSPD\rpweb\buildfiles\client.xml" />
+
+  <property name="appId" value="customer" />
+  <property name="configFile" value="customer.xml" />
+ 
+
+  <target name="build" description="build the app" depends="clean">
+    <csbuilder-macrodef configFile="${configFile}" appId="${appId}" />
+      </target>
+ 
+    <target name="clean" description="clean admin app">
+        <delete dir="C:\BY\STWWMSPD\rpweb\web\${appId}"/>
+        <delete dir="C:\BY\STWWMSPD\rpweb\deploy\${appId}"/>
+    </target>
+</project>

@@ -1,0 +1,17 @@
+entity: Message
+version: '1.0'
+data:
+
+  - locale: en-us
+    namespace: rpux.filtering.columns.sampleScreen
+    messages:
+      - name: ordnum
+        text: Order number
+      - name: client_id
+        text: Client id
+      - name: btcust
+        text: Bill to customer
+      - name: stcust
+        text: Ship to customer
+      - name: rtcust
+        text: Route to customer

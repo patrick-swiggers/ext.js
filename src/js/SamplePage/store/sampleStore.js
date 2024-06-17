@@ -2,7 +2,7 @@
  * Label File Store
  *
  * @extends Ext.data.Store
- * @author Ryan Zhu
+ * @author Patrick S.
  */
 Ext.define('rp.customer.store.sampleStore', {
     extend: 'Ext.data.Store',

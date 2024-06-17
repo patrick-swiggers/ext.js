@@ -1,6 +1,6 @@
 
 /**
- * @author Glen McCormick
+ * @author Patrick S.
  */
 Ext.define('LES.sample.SampleApp', {
   extend: 'WM.taskflow.App',

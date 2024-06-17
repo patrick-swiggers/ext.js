@@ -11,6 +11,7 @@
     <include name="model/sampleModel.js"/>
     <include name="store/sampleStore.js"/>
     <include name="view/sampleView.js"/>
+    <include name="view/sampleForm.js"/>
     <include name="controller/sampleController.js"/>
     <include name="SamplePage.js" />
   </target>

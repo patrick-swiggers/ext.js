@@ -27,9 +27,9 @@ Ext.define('rp.customer.view.sampleView', {
                             new RP.data.model.Format({format: 'csv', display: 'CSV'})
                         ]},{
                         ptype: 'wm.gridActions',
-                        enableDelete: false,
-                        enableAdd: false,
-                        enableCopy: false,
+                        enableDelete: true,
+                        enableAdd: true,
+                        enableCopy: true,
                         enableSimpleFilter: false
                     }],
                     selModel: {

@@ -7,6 +7,8 @@ data:
     messages:
       - name: ordnum
         text: Order number
+      - name: ordtyp
+        text: Order type
       - name: client_id
         text: Client id
       - name: btcust

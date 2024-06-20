@@ -3,7 +3,7 @@
  * This is the data model for label file.
  *
  * @extends Ext.data.Model
- * @author Patrick S.
+ * @author Patrick
  */
 Ext.define('rp.customer.model.sampleModel', {
     extend: 'Ext.data.Model',
@@ -11,6 +11,9 @@ Ext.define('rp.customer.model.sampleModel', {
 
     fields: [{
         name: 'ordnum',
+        type: 'string'
+    }, {
+        name: 'ordtyp',
         type: 'string'
     }, {
         name: 'client_id',

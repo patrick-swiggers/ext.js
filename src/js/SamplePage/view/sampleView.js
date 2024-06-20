@@ -60,11 +60,15 @@ Ext.define('rp.customer.view.sampleView', {
                             xtype: 'linkcolumn',
                             itemId: 'ordnum',
                             header: RP.getMessage('rp.customer.ordnum'),
-                            flex: 4,
+                            flex: 3,
                             dataIndex: 'ordnum'
                         }, {
+                            header: RP.getMessage('rp.customer.ordtyp'),
+                            flex: 2,
+                            dataIndex: 'ordtyp'
+                        }, {
                             header: RP.getMessage('rp.customer.client_id'),
-                            flex: 3,
+                            flex: 2,
                             dataIndex: 'client_id'
                         }, {
                             header: RP.getMessage('rp.customer.btcust'),
@@ -72,11 +76,11 @@ Ext.define('rp.customer.view.sampleView', {
                             dataIndex: 'btcust'
                         }, {
                             header: RP.getMessage('rp.customer.stcust'),
-                            flex: 1,
+                            flex: 2,
                             dataIndex: 'stcust'
                         }, {
                             header: RP.getMessage('rp.customer.rtcust'),
-                            flex: 1,
+                            flex: 2,
                             dataIndex: 'rtcust'
                         }]
                     }

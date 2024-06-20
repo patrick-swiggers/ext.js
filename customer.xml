@@ -9,7 +9,9 @@
           type="js"
           source-dir="${js-dir}/SamplePage">
     <include name="model/sampleModel.js"/>
+    <include name="model/orderTypes.js"/>
     <include name="store/sampleStore.js"/>
+    <include name="store/orderTypes.js"/>
     <include name="view/sampleView.js"/>
     <include name="view/sampleForm.js"/>
     <include name="controller/sampleController.js"/>

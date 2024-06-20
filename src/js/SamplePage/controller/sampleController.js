@@ -1,6 +1,6 @@
 /**
  * This controller handles Label File grid and form
- * @author Patrick S.
+ * @author Patrick
  */
 Ext.define('rp.customer.controller.sampleController', {
     extend: 'Ext.app.Controller',
@@ -36,7 +36,8 @@ Ext.define('rp.customer.controller.sampleController', {
      * @type {String[]}
      */
     stores: [
-        'sampleStore'
+        'sampleStore',
+        'orderTypes'
     ],
 
     /**

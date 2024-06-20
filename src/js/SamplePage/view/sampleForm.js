@@ -43,6 +43,23 @@ Ext.define('rp.customer.view.SampleForm', {
                     enforceMaxLength: true,
                     itemId: 'sampleForm-ordnum'
                 }, {
+                    xtype: 'combo',
+                    queryMode: 'local',
+                    fieldLabel: RP.getMessage('rp.customer.ordtyp'),
+                    labelAlign: 'top',
+                    maxLength: 256,
+                    enforceMaxLength: true,
+                    name: 'ordtyp',
+                    allowBlank: false,
+                    itemId: 'sampleForm-ordtyp',
+                    store: 'rp.customer.store.orderTypes',
+                    displayField: 'orderTypeLongDescription',
+                    valueField: 'orderType',
+                    forceSelection: true,
+                    typeAhead: true,
+                    markDirty: true,
+                    dirtyCls: 'x-grid-dirty-cell'
+                }, {
                     xtype: 'textfield',
                     fieldLabel: RP.getMessage('rp.customer.client_id'),
                     labelAlign: 'top',

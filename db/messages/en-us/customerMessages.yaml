@@ -11,6 +11,23 @@ data:
   - name: taskflowName
     text: Sample Taskflow
 
+  - name: ordnum
+    text: Order number
+  - name: client_id
+    text: Client id
+  - name: btcust
+    text: Bill to customer
+  - name: stcust
+    text: Ship to customer
+  - name: rtcust
+    text: Route to customer
+  - name: title
+    text: Sample Screen
+  - name: formTitle
+    text: Add order
+  - name: ordtyp
+    text: Order type
+
 - locale: en-us
   namespace: rp.customer.sampleTask
   messages:

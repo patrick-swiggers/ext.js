@@ -32,10 +32,11 @@ Ext.define('rp.customer.view.sampleView', {
                         enableCopy: true,
                         enableSimpleFilter: false
                     }],
-                    selModel: {
-                        pruneRemoved: false,
-                        checkOnly: true
-                    },
+                    selModel: Ext.create('Ext.selection.CheckboxModel', {
+                        mode: 'MULTI',
+                        pruneRemoved: false
+                        /*checkOnly: true*/
+                    }),
                     itemId: 'sampleGrid',
                     store: store,
                     filterController: me._getFilterController(),

@@ -55,6 +55,7 @@ Ext.define('rp.customer.view.SampleForm', {
                     store: 'rp.customer.store.orderTypes',
                     displayField: 'orderTypeLongDescription',
                     valueField: 'orderType',
+                    plugins: ['ComboBoxRecordCreator'],
                     forceSelection: true,
                     typeAhead: true,
                     markDirty: true,

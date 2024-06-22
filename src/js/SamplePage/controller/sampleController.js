@@ -1,6 +1,6 @@
 /**
  * This controller handles Label File grid and form
- * @author Patrick
+ * @author Patrick Swiggers
  */
 Ext.define('rp.customer.controller.sampleController', {
     extend: 'Ext.app.Controller',
@@ -21,6 +21,13 @@ Ext.define('rp.customer.controller.sampleController', {
     }, {
         ref: 'ordnum',
         selector: 'kn-sample-sampleForm #sampleForm-ordnum'
+    }, {
+        ref: 'ordertypewindow',
+        selector: 'kn-sample-ordertypewindow',
+        autoQualify: false
+    }, {
+        ref: 'orderTypeCombo',
+        selector: '#sampleForm-ordtyp'
     }],
 
     /**
@@ -81,6 +88,13 @@ Ext.define('rp.customer.controller.sampleController', {
           },
           'kn-sample-sampleForm button[action=cancel]': {
               click: me._onSampleCancelButtonClick
+          },
+          '#sampleForm-ordtyp': {
+              addNew: me._addOrderType
+          },
+          'kn-sample-ordertypewindow button[action=save]': {
+              click: me._saveOrdertype,
+              autoQualify: false
           }
         });
 
@@ -331,6 +345,75 @@ Ext.define('rp.customer.controller.sampleController', {
     _beforeCopyOrderDetail: function(grid, plugin, selected) {
        console.log("you pressed copy");
     },
+
+    _addOrderType: function(addNewCombo, newRecord){
+        // This new record is created 'somewhere' and is available in the store
+        // in modified records when we want to save
+  
+        var me = this,
+            ordertypewindow,
+            form;
+        if (me.getOrdertypewindow())
+        {
+            me.getOrdertypewindow().destroy();
+        }
+        ordertypewindow = Ext.widget('kn-sample-ordertypewindow', {
+            action: 'add',
+            store: me.getOrderTypesStore()
+        });
+        ordertypewindow.create = true;
+        form = ordertypewindow.down('form');
+        form.getForm().loadRecord(newRecord);
+        ordertypewindow.setTitle(RP.getMessage(
+            'rp.customer.addordertype'));
+        ordertypewindow.show();
+      },
+  
+      _saveOrdertype: function(button) {
+          var me = this,
+              ordertypeStore = Ext.StoreManager.lookup('rp.customer.store.orderTypes'),
+              combo,
+              ordertypeRecord,
+              ordertypewindow = me.getOrdertypewindow(),
+              ordertypeform = ordertypewindow.down('form'),
+              formValues = ordertypeform.getForm().getValues(),
+              isDirty = ordertypeform.getForm().isDirty(),
+              isValid = ordertypeform.getForm().isValid();
+              combo = me.getOrderTypeCombo();
+  
+          if (!isDirty) {
+              return;
+          }
+  
+          if (!isValid) {
+              return false;
+          }
+  
+          // only 1 modified record which is the newrecord from the add method above
+         if (ordertypeStore.getModifiedRecords().length > 0) {
+             ordertypeRecord = ordertypeStore.getModifiedRecords()[0];
+             ordertypeRecord.set('orderType', formValues.orderType);
+             ordertypeRecord.set('orderTypeLongDescription', formValues.orderTypeLongDescription);
+             ordertypeStore.sync({
+                  success: function() {
+                      //me.getTracksGrid().filterController.onRefreshClick();
+                      me.getOrdertypewindow().close();
+  
+                      var ordtyp;
+                      if (combo) {
+                          combo.getStore().load();
+                          ordtyp = combo.getStore().findRecord('orderType', formValues.orderType);
+                          combo.select(ordtyp);
+                          combo.setValue(ordtyp.get('orderType'));
+                      }                 },
+                  failure: function() {
+                      ordertypeStore.rejectChanges();
+                  }
+              });
+         }
+  
+  
+      },
 
     /**
      * @method onDeActivate

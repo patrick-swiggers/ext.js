@@ -3,7 +3,7 @@
  * This is the data model for label file.
  *
  * @extends Ext.data.Model
- * @author Patrick
+ * @author Patrick Swiggers
  */
 Ext.define('rp.customer.model.sampleModel', {
     extend: 'Ext.data.Model',

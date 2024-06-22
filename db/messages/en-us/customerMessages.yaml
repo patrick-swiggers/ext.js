@@ -27,6 +27,12 @@ data:
     text: Add order
   - name: ordtyp
     text: Order type
+  - name: addordertype
+    text: Add Order type
+  - name: ordertypeexists
+    text: Order type already exists
+  - name: description
+    text: Description
 
 - locale: en-us
   namespace: rp.customer.sampleTask

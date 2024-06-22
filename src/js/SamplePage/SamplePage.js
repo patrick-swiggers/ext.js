@@ -1,6 +1,6 @@
 
 /**
- * @author Patrick
+ * @author Patrick Swiggers
  */
 Ext.define('LES.sample.SampleApp', {
   extend: 'WM.taskflow.App',

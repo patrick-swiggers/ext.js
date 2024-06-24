@@ -41,7 +41,7 @@ Ext.define('rp.customer.view.Main', {
 					 split: true,
 					 items: [{
                           xtype: "button",
-					      width: 100,
+					      width: 75,
 					      height: 30,
 						  align: "left",
                           itemId: "Submit",

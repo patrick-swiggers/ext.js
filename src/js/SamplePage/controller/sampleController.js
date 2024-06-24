@@ -73,7 +73,9 @@ Ext.define('rp.customer.controller.sampleController', {
               deactivate: me._clearSampleFilterGrid,
               addrequested: me._onAddOrderClick,
               beforecopy: me._beforeCopyOrderDetail,
-              linkclick: me._onCellClickSampleGrid
+              linkclick: me._onCellClickSampleGrid,
+              select: me._onSelectSampleGridRow,
+              deselect: me._onDeselectSampleGridRow
           },
           /* link the activate function to activate */
           'kn-sampleScreen-main [itemId=sampleContainer]': {
@@ -431,6 +433,22 @@ Ext.define('rp.customer.controller.sampleController', {
     _onSampleViewActivate: function() {
         var me = this;
         me.updateTitle(RP.getMessage('rp.customer.title'));
+    },
+
+    /**
+     * @private
+     * select grid row
+     */
+    _onSelectSampleGridRow: function(grid,record){
+        console.log(record.get('ordnum') + ' is selected');
+    },
+
+    /**
+     * @private
+     * deselect grid row
+     */
+    _onDeselectSampleGridRow: function(grid,record){
+        console.log(record.get('ordnum') + ' is deselected');
     }
 
 });

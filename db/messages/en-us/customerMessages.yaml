@@ -33,6 +33,8 @@ data:
     text: Order type already exists
   - name: description
     text: Description
+  - name: createshipment
+    text: Create shipment
 
 - locale: en-us
   namespace: rp.customer.sampleTask

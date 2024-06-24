@@ -40,6 +40,12 @@ Ext.define('rp.customer.view.sampleView', {
                     itemId: 'sampleGrid',
                     store: store,
                     filterController: me._getFilterController(),
+                    toolbarTools: [{
+                        xtype: 'button',
+                        text: RP.getMessage('rp.customer.createshipment'),
+                        itemId: 'createshipmentbtn',
+                        disabled: false
+                     }],
                     /*
                        Paging controls
                      */

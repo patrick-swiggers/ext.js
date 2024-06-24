@@ -97,9 +97,16 @@ Ext.define('rp.customer.controller.sampleController', {
           'kn-sample-ordertypewindow button[action=save]': {
               click: me._saveOrdertype,
               autoQualify: false
+          },
+          'kn-sampleView-main [itemId=createshipmentbtn]': {
+              click: me._createShipment
           }
         });
 
+    },
+
+    _createShipment: function() {
+        console.log("create shipment clicked");
     },
 
     goBack: function() {

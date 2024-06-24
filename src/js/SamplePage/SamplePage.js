@@ -19,10 +19,11 @@ Ext.define('LES.sample.SampleApp', {
     ],
 
     views: [
-        'sampleView'
+        'sampleView',
+        'Main'
     ],
 
-    mainView: 'sampleView',
+    mainView: 'Main',
     namespace: 'rp.customer',
 
     initComponent: function() {

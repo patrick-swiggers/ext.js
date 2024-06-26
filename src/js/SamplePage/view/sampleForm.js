@@ -10,7 +10,7 @@ Ext.define('rp.customer.view.SampleForm', {
     /**
      * The initialization function for this component.
      */
-    initComponent: function() {
+    initComponent: function () {
         var me = this;
 
         associationKey = '';
@@ -69,7 +69,7 @@ Ext.define('rp.customer.view.SampleForm', {
                     maxLength: 256,
                     enforceMaxLength: true,
                     itemId: 'sampleForm-client_id'
-                },{
+                }, {
                     xtype: 'textfield',
                     fieldLabel: RP.getMessage('rp.customer.btcust'),
                     labelAlign: 'top',
@@ -78,7 +78,7 @@ Ext.define('rp.customer.view.SampleForm', {
                     maxLength: 256,
                     enforceMaxLength: true,
                     itemId: 'sampleForm-btcust'
-                },{
+                }, {
                     xtype: 'textfield',
                     fieldLabel: RP.getMessage('rp.customer.stcust'),
                     labelAlign: 'top',
@@ -87,7 +87,7 @@ Ext.define('rp.customer.view.SampleForm', {
                     maxLength: 256,
                     enforceMaxLength: true,
                     itemId: 'sampleForm-stcust'
-                },{
+                }, {
                     xtype: 'textfield',
                     fieldLabel: RP.getMessage('rp.customer.rtcust'),
                     labelAlign: 'top',
@@ -96,6 +96,21 @@ Ext.define('rp.customer.view.SampleForm', {
                     maxLength: 256,
                     enforceMaxLength: true,
                     itemId: 'sampleForm-rtcust'
+                }, {
+                    xtype: 'container',
+                    columnWidth: 8,
+                    items: [{
+                        xtype: 'label',
+                        text: RP.getMessage('rp.customer.orderclasstitle'),
+                        columnWidth: 1,
+                        cls: 'x-form-item-label'
+                    }, {
+                        xtype: 'rpDrilldownButton',
+                        itemId: 'orderclass-button',
+                        text: RP.getMessage('rp.customer.orderclass'),
+                        action: 'orderclassaction',
+                        columnWidth: 1
+                    }]
                 }]
             }]
         });

@@ -1,0 +1,20 @@
+<action>
+    <id>remove_usr_sample_data</id>
+    <name>remove a record for sample data</name>
+    <description>Remove Track details</description>
+    <type>DELETE</type>
+    <ws>
+        <method>DELETE</method>
+        <href>/sampleData/{track_id}</href>
+    </ws>
+    <impl>
+        <command>remove usr sample data</command>
+        <arguments>
+            <argument name="ordnum" type="string" required="true" location="path"
+                description="Order Id" />
+        </arguments>
+    </impl>
+    <auth>
+        <opt>optOpen</opt>
+    </auth>
+</action>

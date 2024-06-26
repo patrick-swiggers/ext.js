@@ -1,0 +1,13 @@
+<command>
+    <name>remove usr order class values</name>
+    <description>removes order class values</description>
+<type>Local Syntax</type>
+<local-syntax>
+<![CDATA[
+[delete
+   from uc_order_class_values
+  where ordnum = @ordnum 
+    and order_class = @order_class]
+]]>
+</local-syntax>
+</command>

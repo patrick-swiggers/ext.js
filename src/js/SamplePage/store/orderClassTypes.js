@@ -1,0 +1,19 @@
+/**
+ * @extends Ext.data.Store
+ * @author Patrick Swiggers
+ */
+Ext.define('rp.customer.store.orderClassTypes', {
+    extend: 'Ext.data.Store',
+    model: 'rp.customer.model.orderClassTypes',
+    pagingEnabled: true,
+    remoteSort: true,
+    proxy: {
+        type: 'rpuxRest', /* special type used here */
+        url: RP.core.ApplicationSites.buildDataServiceUrl('wm', 'wm/orderClassTypes'),
+        reader: {
+            type: 'json',
+            root: 'data'  /* stuff is inside data hierarchy */
+        }
+    },
+    autoLoad: true
+});

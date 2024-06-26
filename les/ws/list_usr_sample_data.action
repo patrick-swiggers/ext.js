@@ -1,0 +1,22 @@
+<action>
+    <id>list_usr_sample_data</id>
+    <name>list_usr_sample_data</name>
+    <description>list_usr_sample_data</description>
+    <type>LIST</type>
+    <ws>
+        <method>GET</method>
+        <href>/sampleData</href>
+    </ws>
+    <listConfig>
+        <columnConfig>list_usr_sample_data</columnConfig>
+        <filterable />
+        <pageable />
+        <sortable />
+    </listConfig>
+    <impl>
+        <command>list usr sample data</command>
+    </impl>
+    <auth>
+        <opt>optOpen</opt>
+    </auth>
+</action>

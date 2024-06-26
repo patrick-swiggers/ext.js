@@ -1,0 +1,25 @@
+<command>
+
+  <name>list usr sample data</name>
+
+  <description>List allocation stats search paths </description>
+
+  <type>Local Syntax</type>
+
+<local-syntax>
+<![CDATA[
+
+publish data
+ where filterByClause = nvl(@filterByClause,
+                            [1 = 1])
+   and sortOrderClause = nvl(@sortOrderClause, 'ordnum')
+|
+[/*#limit=@offset,@limit,true*/
+ select ordnum,ordtyp,client_id,btcust,stcust,rtcust
+   from ord
+  where @filterByClause:raw
+  order by @sortOrderClause:raw]
+
+]]>
+</local-syntax>
+</command>

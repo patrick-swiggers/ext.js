@@ -1,0 +1,12 @@
+{
+    "columns": {
+        "order_class": {
+            "type": "java.lang.String",
+            "alias": "order_class"
+        },
+        "description": {
+            "type": "java.lang.String",
+            "alias": "description"
+        }
+    }
+}

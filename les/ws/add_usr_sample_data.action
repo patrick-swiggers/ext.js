@@ -1,0 +1,22 @@
+<action>
+    <id>add_usr_sample_data</id>
+    <name>add usr sample data</name>
+    <description>Add usr sample data</description>
+    <type>ADD</type>
+    <ws>
+        <method>POST</method>
+        <href>/sampleData/{id}</href>
+    </ws>
+    <impl>
+        <command>add usr sample data</command>
+        <arguments>
+            <argument name="ordnum" type="string" required="true" location="path"
+                description="Order number." />
+        </arguments>
+    </impl>
+
+    <auth>
+        <opt>optOpen</opt>
+    </auth>
+    <primary>true</primary>
+</action>

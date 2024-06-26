@@ -1,0 +1,19 @@
+<command>
+    <name>list usr order class</name>
+    <description>Lists order class values</description>
+    <type>Local Syntax</type>
+<local-syntax>
+<![CDATA[
+publish data
+ where filterByClause = nvl(@filterByClause,
+                            [1 = 1])
+   and sortOrderClause = nvl(@sortOrderClause, 'order_class')
+|
+[/*#limit=@offset,@limit,true*/
+select *
+   from uc_order_class_types
+  where @filterByClause:raw
+  order by @sortOrderClause:raw]
+]]>
+</local-syntax>
+</command>

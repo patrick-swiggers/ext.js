@@ -1,0 +1,11 @@
+<command>
+    <name>add usr order class values</name>
+    <description>adds order class values</description>
+<type>Local Syntax</type>
+<local-syntax>
+<![CDATA[
+create record
+where table_name = 'uc_order_class_values'
+]]>
+</local-syntax>
+</command>

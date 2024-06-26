@@ -1,0 +1,24 @@
+<action>
+    <id>change_usr_sample_data</id>
+    <name>change_usr_sample_data</name>
+    <description>change_usr_sample_data</description>
+
+    <type>EDIT</type>
+
+    <ws>
+        <method>PUT</method>
+        <href>/sampleData/{id}</href>
+    </ws>
+    <impl>
+        <command>change usr sample data</command>
+        <arguments>
+            <argument name="ordnum" type="string" required="true" location="path"
+                description="Order number." />
+        </arguments>
+    </impl>
+
+    <auth>
+        <opt>optOpen</opt>
+    </auth>
+    <primary>true</primary>
+</action>

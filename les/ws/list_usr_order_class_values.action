@@ -1,0 +1,22 @@
+<action>
+    <id>list_usr_order_class_values</id>
+    <name>list_usr_order_class_values</name>
+    <description>list_usr_order_class_values</description>
+    <type>LIST</type>
+    <ws>
+        <method>GET</method>
+        <href>/orderClassValues</href>
+    </ws>
+    <listConfig>
+        <columnConfig>list_usr_order_class_values</columnConfig>
+        <filterable />
+        <pageable />
+        <sortable />
+    </listConfig>
+    <impl>
+        <command>list usr order class values</command>
+    </impl>
+    <auth>
+        <opt>optOpen</opt>
+    </auth>
+</action>

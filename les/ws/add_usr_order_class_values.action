@@ -1,0 +1,23 @@
+<action>
+    <id>add_usr_order_class_values</id>
+    <name>add_usr_order_class_values</name>
+    <description>add_usr_order_class_values</description>
+    <type>ADD</type>
+    <ws>
+        <method>POST</method>
+        <href>/orderClassValues/{id}</href>
+    </ws>
+    <impl>
+        <command>add usr order class values</command>
+        <arguments>
+            <argument name="ordnum" type="string" required="true" location="path"
+                description="Order number." />
+            <argument name="order_class" type="string" required="true" location="path"
+                description="Order class." />
+        </arguments>
+    </impl>
+    <auth>
+        <opt>optOpen</opt>
+    </auth>
+    <primary>true</primary>
+</action> 

@@ -18,7 +18,8 @@ Ext.define('rp.customer.view.Main', {
      * where we are packing from.
      */
     config: {
-        packingFromId: undefined
+        packingFromId: undefined,
+        estimatedPallets: 0
     },
 
     initComponent: function() {
